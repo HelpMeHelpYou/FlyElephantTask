@@ -15,14 +15,14 @@ public:
     ArgParser argParser;
 };
 
-TEST_F(TestArgParserFixture,ShouldParse)
+TEST_F(TestArgParserFixture,ShouldParse3args)
 {
     EXPECT_EQ(argParser.Parse(3,args),true);
     EXPECT_EQ(argParser.GetDataFilename(),param1);
     EXPECT_EQ(argParser.GetDictionaryFilename(),param2);
 }
 
-TEST_F(TestArgParserFixture,ShouldNotParse)
+TEST_F(TestArgParserFixture,ShouldNotParse2args)
 {
     EXPECT_EQ(argParser.Parse(2,args),false);
 }
